@@ -349,6 +349,25 @@ ul.contact .contact-item a {
 
 .center {
   text-align: center;
+  margin: 10px 0 0 0;
+}
+
+ul.list-content {
+  margin-left: 10px;
+}
+
+.btn-link {
+  background-color: #58b1e6;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 7px;
+  border-radius: 4px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.btn-link:hover {
+  background-color: #1b51a8;
 }
 
 footer {
