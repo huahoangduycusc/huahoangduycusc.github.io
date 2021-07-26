@@ -9,6 +9,9 @@ $(document).on('click', 'a[href^="#"]', function (e) {
     }
     // prevent standard hash navigation (avoid blinking in IE)
     e.preventDefault();
+    // add class active if user hit
+    $(".nav-link").removeClass("active");
+    $(this).addClass("active");
     // top position relative to the document
     var pos = $id.offset().top-70;
     // animated top scrolling

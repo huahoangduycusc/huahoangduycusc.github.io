@@ -40,9 +40,10 @@ body {
 }
 
 nav {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 99;
   background-color: #fff;
   border-bottom: 1px solid #dbdbdb;
@@ -93,12 +94,35 @@ nav .nav-container .nav-content .nav-list .nav-item {
   font-weight: 600;
 }
 
-nav .nav-container .nav-content .nav-list .nav-item a {
+nav .nav-container .nav-content .nav-list .nav-item .nav-link {
   color: #333;
+  display: inline-block;
 }
 
-nav .nav-container .nav-content .nav-list .nav-item a:hover {
+nav .nav-container .nav-content .nav-list .nav-item .nav-link:hover {
   color: #3c94e7;
+}
+
+nav .nav-container .nav-content .nav-list .nav-item .nav-link::after {
+  content: "";
+  width: 0%;
+  position: absolute;
+  border-bottom: 2px solid #3c94e7;
+  bottom: -5px;
+  left: 0%;
+  -webkit-transition: width 0.3s linear;
+  transition: width 0.3s linear;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+nav .nav-container .nav-content .nav-list .nav-item .nav-link.active {
+  color: #3c94e7;
+  position: relative;
+}
+
+nav .nav-container .nav-content .nav-list .nav-item .nav-link.active::after {
+  width: 100%;
 }
 
 nav .menu {
@@ -112,6 +136,7 @@ nav .menu {
 }
 
 .hero {
+  margin-top: 50px;
   position: relative;
   height: 500px;
   overflow: hidden;
@@ -173,6 +198,8 @@ nav .menu {
     transition: transform 0.3s ease;
     transition: transform 0.3s ease, -webkit-transform 0.3s ease;
     padding-top: 20px;
+    z-index: 101;
+    overflow: hidden;
   }
   nav .nav-container .nav-content .small-logo {
     font-size: 35px;
@@ -191,16 +218,16 @@ nav .menu {
     color: #eee;
     margin-right: 0px;
   }
-  nav .nav-container .nav-content .nav-list .nav-item a {
+  nav .nav-container .nav-content .nav-list .nav-item .nav-link {
+    color: #ddd;
     display: block;
-    color: #eee;
     padding: 15px 10px;
     -webkit-transition: -webkit-transform 0.3s linear;
     transition: -webkit-transform 0.3s linear;
     transition: transform 0.3s linear;
     transition: transform 0.3s linear, -webkit-transform 0.3s linear;
   }
-  nav .nav-container .nav-content .nav-list .nav-item a:hover {
+  nav .nav-container .nav-content .nav-list .nav-item .nav-link:hover {
     color: #3c94e7;
     -webkit-transform: translateX(10px);
             transform: translateX(10px);
@@ -253,7 +280,7 @@ section .section-header {
 }
 
 section .section-aboutme {
-  background-image: linear-gradient(120deg, #4181e7 0%, #c2e9fb 100%);
+  background-image: linear-gradient(120deg, #6ca0f3 0%, #c2e9fb 100%);
 }
 
 section .section-skill {
@@ -299,10 +326,16 @@ section .section-education {
 
 ul.contact {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 ul.contact .contact-item {
   display: block;
+  width: 50%;
   padding: 5px 0;
 }
 

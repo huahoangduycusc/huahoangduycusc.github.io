@@ -35,8 +35,10 @@ body {
 }
 
 nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 99;
   background-color: #fff;
   border-bottom: 1px solid #dbdbdb;
@@ -66,10 +68,28 @@ nav {
           margin-right: 10px;
           font-size: 16px;
           font-weight: 600;
-          a {
+          .nav-link {
             color: #333;
+            display: inline-block;
             &:hover {
               color: rgb(60, 148, 231);
+            }
+            &::after {
+              content: "";
+              width: 0%;
+              position: absolute;
+              border-bottom: 2px solid rgb(60, 148, 231);
+              bottom: -5px;
+              left: 0%;
+              transition: width 0.3s linear;
+              transition-delay: 0.2s;
+            }
+          }
+          .nav-link.active {
+            color: rgb(60, 148, 231);
+            position: relative;
+            &::after {
+              width: 100%;
             }
           }
         }
@@ -88,6 +108,7 @@ nav {
 }
 
 .hero {
+  margin-top: 50px;
   position: relative;
   height: 500px;
   overflow: hidden;
@@ -136,6 +157,8 @@ nav {
         transform: translateX(-250px);
         transition: transform 0.3s ease;
         padding-top: 20px;
+        z-index: 101;
+        overflow: hidden;
         .small-logo {
           font-size: 35px;
           text-align: center;
@@ -148,9 +171,9 @@ nav {
             display: block;
             color: #eee;
             margin-right: 0px;
-            a {
+            .nav-link {
+              color: #ddd;
               display: block;
-              color: #eee;
               padding: 15px 10px;
               transition: transform 0.3s linear;
               &:hover {
@@ -209,7 +232,7 @@ section {
     font-size: 25px;
   }
   .section-aboutme {
-    background-image: linear-gradient(120deg, #4181e7 0%, #c2e9fb 100%);
+    background-image: linear-gradient(120deg, #6ca0f3 0%, #c2e9fb 100%);
   }
   .section-skill {
     background-image: linear-gradient(120deg, #41d477 0%, #8fd3f4 100%);
@@ -217,9 +240,8 @@ section {
   .section-product {
     background-image: linear-gradient(to right, #dabb90 0%, #fcb69f 100%);
   }
-  .section-education{
+  .section-education {
     background-image: linear-gradient(120deg, #f5a46e 0%, #ff4a43 100%);
-
   }
 }
 .box {
@@ -248,8 +270,11 @@ section {
 }
 ul.contact {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
   .contact-item {
     display: block;
+    width: 50%;
     padding: 5px 0;
     i {
       margin-right: 15px;
@@ -260,12 +285,12 @@ ul.contact {
   }
 }
 
-.center{
-    text-align: center;
+.center {
+  text-align: center;
 }
 // ============================= FOOTER =================
-footer{
-    background-color: rgb(163, 163, 163);
-    margin-top: 30px;
-    padding: 30px;
+footer {
+  background-color: rgb(163, 163, 163);
+  margin-top: 30px;
+  padding: 30px;
 }
