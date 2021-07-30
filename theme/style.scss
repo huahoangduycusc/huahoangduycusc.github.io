@@ -55,9 +55,14 @@ nav {
     .logo {
       font-family: "Kalam", cursive;
       font-size: 40px;
+      a{
+        color: #333;
+        user-select: none;
+      }
     }
     .nav-content {
       .small-logo {
+        font-family: "Kalam", cursive;
         display: none;
       }
       .nav-list {
@@ -583,7 +588,7 @@ ul.list-content {
   height: 30px;
 }
 footer {
-  background-color: rgb(109, 109, 109);
+  background-color: rgb(12, 12, 12);
   margin-top: 30px;
   padding: 30px;
   color: #eee;

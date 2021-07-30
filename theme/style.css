@@ -76,7 +76,16 @@ nav .nav-container .logo {
   font-size: 40px;
 }
 
+nav .nav-container .logo a {
+  color: #333;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 nav .nav-container .nav-content .small-logo {
+  font-family: "Kalam", cursive;
   display: none;
 }
 
@@ -707,7 +716,7 @@ ul.list-content {
 }
 
 footer {
-  background-color: #6d6d6d;
+  background-color: #0c0c0c;
   margin-top: 30px;
   padding: 30px;
   color: #eee;
