@@ -356,6 +356,12 @@ ul.contact .contact-item a {
   color: #333;
 }
 
+@media screen and (max-width: 768px) {
+  ul.contact .contact-item {
+    width: 100%;
+  }
+}
+
 .center {
   text-align: center;
   margin: 10px 0 0 0;
