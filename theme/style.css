@@ -364,6 +364,7 @@ ul.contact .contact-item a {
     font-size: 30px;
   }
   .hero .hero-content h1 {
+    padding-top: 5px;
     font-size: 35px;
   }
   .hero .hero-content .profile-avatar img {
