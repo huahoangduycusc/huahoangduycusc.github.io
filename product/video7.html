@@ -1,0 +1,95 @@
+<!-- modal -->
+<div class="modal active" id="product1">
+    <div class="modal-container">
+        <div class="modal-body">
+            <div class="youtube">
+                <div class="youtube-warning">
+                    if the video has problem please check here
+                    <a href="https://www.youtube.com/watch?v=2x4ILRFHcoU" target="_blank"><i class="fab fa-youtube"></i>
+                        Youtube</a>
+                </div>
+                <div id="player"></div>
+            </div>
+            <!-- end video -->
+            <div class="modal-description">
+                <div class="modal-title-name">
+                    <h2>Online Help Desk</h2>
+                    <p class="project-date"><i class="far fa-clock"></i> Oct 2020 – Nov 2020</p>
+                </div>
+                <div class="m-project">
+                    <span>Position</span>
+                    <span>Team Leader, Full-stack developer</span>
+                </div>
+                <!-- end div -->
+                <div class="m-project">
+                    <span>Team size</span>
+                    <span>3</span>
+                </div>
+                <!-- end div -->
+                <div class="m-project">
+                    <span>Description in Vietnamese</span>
+                    <span>Đây là đồ án học kỳ 3 của mình với đề tài Online Help Desk. Dự án này nhằm phát triển 1 trang
+                        web trợ giúp trực tuyến cho
+                        các cơ sở trong khuôn viên trường. Hệ thống này có thể được sử dụng để tự động hóa quy trình làm
+                        việc của các yêu cầu
+                        dịch vụ cho các cơ sở khác nhau trong khuôn viên trường. Đây là một hệ thống tích hợp bao gồm
+                        các loại cơ sở hạ tầng khác nhau
+                        như phòng học, phòng thí nghiệm, ký túc xá, trung tâm máy tính, vv. Người dùng đã đăng ký (sinh
+                        viên, giảng viên, trợ lý phòng thí
+                        nghiệm và những người khác) sẽ có thể đăng nhập yêu cầu dịch vụ cho bất kỳ cơ sở nào được hỗ
+                        trợ.
+                        Những yêu cầu này sẽ được gửi đến những người có liên quan, cũng là những người dùng hợp lệ của
+                        hệ thống, để họ giải quyết.
+                        Có các tính năng như thông báo / nhắc nhở qua email, bổ sung một cơ sở mới vào hệ thống, trình
+                        tạo báo cáo, v.v. trong hệ thống này.
+                    </span>
+                </div>
+                <!-- end div -->
+                <div class="m-project">
+                    <span>Teck stack</span>
+                    <span class="tech">C# (ASP.NET MVC)</span>, <span class="tech">MS SQL Server</span>, <span
+                        class="tech">CSS</span>,
+                    <span class="tech">HTML</span>, <span class="tech">Javascript</span>
+                </div>
+                <!-- end div -->
+                <div class="m-project">
+                    <span>Template Admin</span>
+                    <span>
+                        <a href="https://github.com/trananhtuat/at-pro-admin-template" target="_blank"> <i class="fas fa-user"></i>
+                            Tuat Tran Anh</a>
+                        </span>
+                </div>
+                <!-- end div -->
+                <div class="border"></div>
+                <div class="space"></div>
+                <div class="m-project-resource">
+                    <a href="http://www.mediafire.com/file/823a9kthim0cyzx/eProject_Group_1_CP2096H02.zip/file"
+                        class="btn-link-go" target="_blank">
+                        <i class="fas fa-eye"></i> Media Fire
+                    </a>
+                </div>
+            </div>
+            <!-- end description -->
+            <button class="modal-close" data-id="product1"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+</div>
+<script>
+    player = new YT.Player('player', {
+        height: '100%',
+        width: '100%',
+        playerVars: { 'controls': 1, 'autohide': 1 },
+        videoId: '2x4ILRFHcoU',
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+    });
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+        }
+    }
+</script>

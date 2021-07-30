@@ -1,0 +1,75 @@
+<!-- modal -->
+<div class="modal active" id="product1">
+    <div class="modal-container">
+        <div class="modal-body">
+            <div class="youtube">
+                <div class="youtube-warning">
+                    if the video has problem please check here 
+                    <a href="https://www.youtube.com/watch?v=V3_S-69wEhI" target="_blank"><i class="fab fa-youtube"></i> Youtube</a>
+                </div>
+                <div id="player"></div>
+            </div>
+            <!-- end video -->
+            <div class="modal-description">
+                <div class="modal-title-name">
+                    <h2>Reading Newpapers Online</h2>
+                    <p class="project-date"><i class="far fa-clock"></i> August 2021 – Sep 2020</p>
+                </div>
+                <div class="m-project">
+                    <span>Position</span>
+                    <span>Full-stack developer</span>
+                </div>
+                <!-- end div -->
+                <div class="m-project">
+                    <span>Description in Vietnamese</span>
+                    <span>Mình đã dựng lại 1 phiên bản web tin tức bằng ASP.NET MVC của mình sang PHP. 
+                        Trang web xem tin tức cho phép người dùng đăng ký, đăng nhập và bình luận về các bài đăng cũng như theo dõi các tác
+                        giả trên trang để nhận các tin tức mới nhất khi các tác giả đăng bài báo mới. Người dùng đăng ký có thể tương tác với các bài viết, 
+                        nhắn tin, chỉnh sửa thông tin cá nhân, theo dõi các tác giả. 
+                        Cho phép admin thống kê, tạo report, khóa tài khỏan vv, chi tiết mời mọi người xem video.
+                    </span>
+                </div>
+                <!-- end div -->
+                <div class="m-project">
+                    <span>Teck stack</span>
+                    <span class="tech">PHP</span>, <span class="tech">MySQL</span>, <span class="tech">CSS</span>,
+                    <span class="tech">HTML</span>, <span class="tech">Javascript</span>
+                </div>
+                <!-- end div -->
+                <div class="m-project">
+                    <span>Template Admin</span>
+                    <span><a href="https://github.com/trananhtuat/at-pro-admin-template"> <i class="fas fa-user"></i> Tuat Tran Anh</a></span>
+                </div>
+                <!-- end div -->
+                <div class="border"></div>
+                <div class="space"></div>
+                <div class="m-project-resource">
+                    <a href="https://github.com/huahoangduycusc/pet-project-newspaper-php" class="btn-link-go" target="_blank">
+                        <i class="fab fa-github"></i> Github
+                    </a>
+                </div>
+            </div>
+            <!-- end description -->
+            <button class="modal-close" data-id="product1"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+</div>
+<script>
+    player = new YT.Player('player', {
+        height: '100%',
+        width: '100%',
+        playerVars: { 'controls': 1, 'autohide': 1 },
+        videoId: 'V3_S-69wEhI',
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+    });
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+        }
+      }
+</script>

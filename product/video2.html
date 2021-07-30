@@ -1,0 +1,69 @@
+<!-- modal -->
+<div class="modal active" id="product1">
+    <div class="modal-container">
+        <div class="modal-body">
+            <div class="youtube">
+                <div class="youtube-warning">
+                    if the video has problem please check here 
+                    <a href="https://www.youtube.com/watch?v=Nyh4LNr90z4" target="_blank"><i class="fab fa-youtube"></i> Youtube</a>
+                </div>
+                <div id="player"></div>
+            </div>
+            <!-- end video -->
+            <div class="modal-description">
+                <div class="modal-title-name">
+                    <h2>Instagram</h2>
+                    <p class="project-date"><i class="far fa-clock"></i> January 2021 – February 2021</p>
+                </div>
+                <div class="m-project">
+                    <span>Position</span>
+                    <span>Full-stack developer</span>
+                </div>
+                <!-- end div -->
+                <div class="m-project">
+                    <span>Description in Vietnamese</span>
+                    <span>Project này mình dựng lại một phần chức năng giống với mạng xã hội Instagram, cho phép người dùng
+                        đăng ký, đăng nhập, theo dõi bất kỳ tài khoản nào trên hệ thống và theo dõi trạng thái của họ. Ngoài ra người dùng
+                        có thể đăng trạng thái mới kèm vài hình ảnh của mình, bình luận và chia sẻ bài đăng, chỉnh sửa thông tin cá nhân và thay
+                        đổi mật khẩu...
+                    </span>
+                </div>
+                <!-- end div -->
+                <div class="m-project">
+                    <span>Teck stack</span>
+                    <span class="tech">Java web (JSP, Servlet)</span>, <span class="tech">MS SQL Server</span>, <span class="tech">CSS</span>,
+              <span class="tech">HTML</span>, <span class="tech">Javascript</span>
+                </div>
+                <!-- end div -->
+                <div class="border"></div>
+                <div class="space"></div>
+                <div class="m-project-resource">
+                    <a href="https://drive.google.com/drive/folders/16nggs_J8MwFx5-vlQfMhbdJw-IGYGfqJ?usp=sharing" class="btn-link-go" target="_blank">
+                        <i class="fab fa-google-drive"></i> Google Drive
+                    </a>
+                </div>
+            </div>
+            <!-- end description -->
+            <button class="modal-close" data-id="product1"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+</div>
+<script>
+    player = new YT.Player('player', {
+        height: '100%',
+        width: '100%',
+        playerVars: { 'controls': 1, 'autohide': 1 },
+        videoId: 'Nyh4LNr90z4',
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+    });
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+        }
+      }
+</script>

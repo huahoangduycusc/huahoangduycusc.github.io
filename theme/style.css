@@ -370,6 +370,342 @@ ul.list-content {
   background-color: #1b51a8;
 }
 
+.product-filter {
+  margin-bottom: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.btn-filter {
+  outline: none;
+  display: inline-block;
+  cursor: pointer;
+  background-color: #50a6df;
+  border: 1px solid transparent;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 20px;
+  font-size: 16x;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 999px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+}
+
+.btn-filter:hover {
+  background-color: #154f75;
+}
+
+.btn-filter.active {
+  background-color: #154f75;
+  -webkit-box-shadow: 2px 2px 5px rgba(19, 78, 206, 0.6);
+          box-shadow: 2px 2px 5px rgba(19, 78, 206, 0.6);
+}
+
+.filter-item.show {
+  -webkit-animation: fadeIn 0.4s ease;
+          animation: fadeIn 0.4s ease;
+}
+
+.filter-item.hide {
+  display: none;
+}
+
+.tech {
+  display: inline-block;
+  margin-right: 4px;
+  font-size: 14px;
+  background-color: #303030;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin-top: 5px;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.product {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.product .product-image {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.product .product-image img {
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+.product .product-name {
+  margin-bottom: 5px;
+}
+
+.product .product-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-size: 35px;
+}
+
+.product:hover .product-image img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.product:hover .product-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  position: fixed;
+  width: 100%;
+  color: #333;
+  height: 100%;
+  z-index: 110;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  overflow-y: auto;
+}
+
+.modal a {
+  color: #4499d1;
+}
+
+.modal a:hover {
+  text-decoration: underline;
+  color: #19699e;
+}
+
+.modal .modal-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px 10px;
+}
+
+.modal .modal-container .modal-body {
+  max-width: 600px;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.modal .modal-container .modal-body .youtube {
+  width: 50%;
+}
+
+.modal .modal-container .modal-body .youtube .youtube-warning {
+  margin-bottom: 5px;
+}
+
+.modal .modal-container .modal-body .youtube .youtube-warning a {
+  color: #e02f38;
+  font-weight: 600;
+}
+
+.modal .modal-container .modal-body .modal-description {
+  width: 50%;
+  padding-left: 15px;
+}
+
+.modal .modal-container .modal-body .modal-close {
+  position: absolute;
+  top: 5px;
+  display: block;
+  right: 20px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  font-size: 30px;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+  z-index: 10;
+  outline: none;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.modal .modal-container .modal-body .modal-close:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+@media (max-width: 768px) {
+  .modal .modal-container .modal-body .youtube {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .modal .modal-container .modal-body .modal-description {
+    width: 100%;
+    padding-left: 0px;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal .modal-container .modal-body {
+    max-width: 880px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal .modal-container .modal-body {
+    max-width: 1140px;
+  }
+}
+
+.youtube #player {
+  height: 450px;
+}
+
+.btn-link-go {
+  padding: 10px 20px;
+  color: #fff !important;
+  background-color: #212529;
+  border-color: #212529;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-link-go:hover {
+  background-color: #4499d1;
+  text-decoration: none !important;
+}
+
+.modal-description .modal-title-name h2 {
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+.modal-description .modal-title-name .project-date {
+  color: #222;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.modal-description .m-project {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.modal-description .m-project span {
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.modal-description .m-project span:first-child {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.modal-description .m-project span:first-child::after {
+  content: ":";
+  display: inline-block;
+  position: absolute;
+}
+
+.border {
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.space {
+  width: 100%;
+  height: 30px;
+}
+
 footer {
   background-color: #6d6d6d;
   margin-top: 30px;

@@ -1,0 +1,68 @@
+<!-- modal -->
+<div class="modal active" id="product1">
+    <div class="modal-container">
+        <div class="modal-body">
+            <div class="youtube">
+                <div class="youtube-warning">
+                    if the video has problem please check here 
+                    <a href="https://www.youtube.com/watch?v=2-qdcqe8HF0" target="_blank"><i class="fab fa-youtube"></i> Youtube</a>
+                </div>
+                <div id="player"></div>
+            </div>
+            <!-- end video -->
+            <div class="modal-description">
+                <div class="modal-title-name">
+                    <h2>Inn Management</h2>
+                    <p class="project-date"><i class="far fa-clock"></i> May 2021 – July 2021</p>
+                </div>
+                <div class="m-project">
+                    <span>Position</span>
+                    <span>Developer</span>
+                </div>
+                <!-- end div -->
+                <div class="m-project">
+                    <span>Description in Vietnamese</span>
+                    <span>
+                        Một dự án freelance nhỏ của mình với yêu cầu tạo 1 ứng dụng web application cho phép quản lý các phòng trọ, ghi hóa đơn chi tiêu hàng tháng,
+                        thống kê doanh thu, nhắc nhở thu tiền và xuất hóa đơn ra file pdf.
+                    </span>
+                </div>
+                <!-- end div -->
+                <div class="m-project">
+                    <span>Teck stack</span>
+                    <span class="tech">PHP</span>, <span class="tech">MySQL</span>, <span class="tech">CSS</span>,
+                    <span class="tech">HTML</span>, <span class="tech">Javascript</span>
+                </div>
+                <!-- end div -->
+                <div class="m-project">
+                    <span>Template Admin</span>
+                    <span><a href="https://github.com/trananhtuat/apex-admin-dashboard" target="_blank"> <i class="fas fa-user"></i> Tuat Tran Anh</a></span>
+                </div>
+                <!-- end div -->
+                <div class="border"></div>
+                <div class="space"></div>
+            </div>
+            <!-- end description -->
+            <button class="modal-close" data-id="product1"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+</div>
+<script>
+    player = new YT.Player('player', {
+        height: '100%',
+        width: '100%',
+        playerVars: { 'controls': 1, 'autohide': 1 },
+        videoId: '2-qdcqe8HF0',
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+    });
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+        }
+      }
+</script>

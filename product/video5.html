@@ -1,0 +1,65 @@
+<!-- modal -->
+<div class="modal active" id="product1">
+    <div class="modal-container">
+        <div class="modal-body">
+            <div class="youtube">
+                <div class="youtube-warning">
+                    if the video has problem please check here 
+                    <a href="https://www.youtube.com/watch?v=6QQoqpVDFiU" target="_blank"><i class="fab fa-youtube"></i> Youtube</a>
+                </div>
+                <div id="player"></div>
+            </div>
+            <!-- end video -->
+            <div class="modal-description">
+                <div class="modal-title-name">
+                    <h2>Giftcode</h2>
+                    <p class="project-date"><i class="far fa-clock"></i> June 2020 – July 2020</p>
+                </div>
+                <div class="m-project">
+                    <span>Position</span>
+                    <span>Full-stack developer</span>
+                </div>
+                <!-- end div -->
+                <div class="m-project">
+                    <span>Description in Vietnamese</span>
+                    <span>Một project freelance nhỏ mình làm cho khách với yêu cầu làm 1 trang web application quản lý mã quà tặng, cho phép người dùng
+                        sử dụng giftcode đã tạo trên hệ thống với hạn sử dụng là 1 lần duy nhất. Sau khi xác nhận gift thì tiến hành gửi dữ liệu 
+                        tên nhân vật và server người dùng lựa chọn tới server game thông qua phương thức CRUL POST. <br>
+                        Server trả về 1 chuỗi JSON để kiểm tra tên nhân vật game liệu có tồn tại hoặc server có tương thích hoặc nếu đáp ứng
+                        đủ 2 điều kiện thì tiến hành thêm đồ hoặc tiền vào game cho nhân vật.
+                    </span>
+                </div>
+                <!-- end div -->
+                <div class="m-project">
+                    <span>Teck stack</span>
+                    <span class="tech">PHP</span>, <span class="tech">MySQL</span>, 
+              <span class="tech">SASS</span>, <span class="tech">HTML</span>, <span class="tech">Javascript</span>
+                </div>
+                <!-- end div -->
+                <div class="border"></div>
+                <div class="space"></div>
+            </div>
+            <!-- end description -->
+            <button class="modal-close" data-id="product1"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+</div>
+<script>
+    player = new YT.Player('player', {
+        height: '100%',
+        width: '100%',
+        playerVars: { 'controls': 1, 'autohide': 1 },
+        videoId: '6QQoqpVDFiU',
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+    });
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+        }
+      }
+</script>

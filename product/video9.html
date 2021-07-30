@@ -1,0 +1,80 @@
+<!-- modal -->
+<div class="modal active" id="product1">
+    <div class="modal-container">
+        <div class="modal-body">
+            <div class="youtube">
+                <div class="youtube-warning">
+                    if the video has problem please check here 
+                    <a href="https://www.youtube.com/watch?v=kOinNkijTQ8" target="_blank"><i class="fab fa-youtube"></i> Youtube</a>
+                </div>
+                <div id="player"></div>
+            </div>
+            <!-- end video -->
+            <div class="modal-description">
+                <div class="modal-title-name">
+                    <h2>Music Shop Online</h2>
+                    <p class="project-date"><i class="far fa-clock"></i> June 2021 – July 2021</p>
+                </div>
+                <div class="m-project">
+                    <span>Position</span>
+                    <span>Team Leader, Developer</span>
+                </div>
+                <!-- end div -->
+                <div class="m-project">
+                    <span>Team size</span>
+                    <span>3</span>
+                </div>
+                <!-- end div -->
+                <div class="m-project">
+                    <span>Description in Vietnamese</span>
+                    <span>Đây là đồ án học kỳ 4 môn JAVA của mình, trong đồ án này mình đóng vai trò Developer và Team Leader của nhóm. Trang web này
+                        cho phép người dùng đăng ký tài khoản để nghe và mua nhạc trực tuyến và thanh toán qua cổng ngân hàng, vì project chưa mang tính
+                        thương mai nên sử dụng cổng thanh toán demo. Người dùng có thể quản lý tài khoản cá nhân, xem lịch sử mua hàng, đăng dòng
+                        trạng thái cá nhân kèm theo 1 bài hát nào đó có trên hệ thống, ngoài ra hệ thống còn phân chia các loại bảng xếp hạng theo ngày, tuần,
+                        tháng, biểu đồ theo lượt xem. Admin có thể thống kê và quản lý bài hát, người dùng, hóa đơn của khách hàng vv.
+                    </span>
+                </div>
+                <!-- end div -->
+                <div class="m-project">
+                    <span>Teck stack</span>
+                    <span class="tech">JAVA (JSP, Servlet, JSF, EJB)</span>, <span class="tech">MS SQL Server</span>, <span class="tech">CSS</span>,
+              <span class="tech">HTML</span>, <span class="tech">Javascript</span>
+                </div>
+                <!-- end div -->
+                <div class="m-project">
+                    <span>Template Admin</span>
+                    <span><a href="https://github.com/trananhtuat/apex-admin-dashboard" target="_blank"> <i class="fas fa-user"></i> Tuat Tran Anh</a></span>
+                </div>
+                <!-- end div -->
+                <div class="border"></div>
+                <div class="space"></div>
+                <div class="m-project-resource">
+                    <a href="https://github.com/huahoangduycusc/eproject-sem-4-last-one" class="btn-link-go" target="_blank">
+                        <i class="fab fa-google-drive"></i> Github
+                    </a>
+                </div>
+            </div>
+            <!-- end description -->
+            <button class="modal-close" data-id="product1"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+</div>
+<script>
+    player = new YT.Player('player', {
+        height: '100%',
+        width: '100%',
+        playerVars: { 'controls': 1, 'autohide': 1 },
+        videoId: 'kOinNkijTQ8',
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+    });
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+        }
+      }
+</script>
