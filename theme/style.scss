@@ -296,6 +296,23 @@ ul.contact {
       width: 100%;
     }
   }
+  .hero {
+    .hero-content {
+      .welcome {
+        font-size: 30px;
+      }
+      h1 {
+        font-size: 35px;
+      }
+      .profile-avatar {
+        img {
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
 }
 .center {
   text-align: center;

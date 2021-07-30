@@ -360,6 +360,18 @@ ul.contact .contact-item a {
   ul.contact .contact-item {
     width: 100%;
   }
+  .hero .hero-content .welcome {
+    font-size: 30px;
+  }
+  .hero .hero-content h1 {
+    font-size: 35px;
+  }
+  .hero .hero-content .profile-avatar img {
+    width: 150px;
+    height: 150px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
 .center {
