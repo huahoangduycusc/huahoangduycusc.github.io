@@ -17,26 +17,10 @@ img {
 }
 
 body {
-  height: 200vh;
   font-size: 14px;
-  overflow-x: hidden;
   background-color: #f1f2f7;
   font-family: "Open Sans", sans-serif;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #2c74c7;
-  border-radius: 999px;
+  height: 100%;
 }
 
 nav {
@@ -721,6 +705,24 @@ ul.list-content {
   content: ":";
   display: inline-block;
   position: absolute;
+}
+
+.navbar-fixed-bottom {
+  position: fixed;
+  z-index: 150;
+  right: 10px;
+  bottom: 20px;
+}
+
+.navbar-fixed-bottom a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #50a6df;
+  text-align: center;
+  line-height: 40px;
+  color: #50a6df;
 }
 
 .border {
