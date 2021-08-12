@@ -55,9 +55,10 @@ nav {
         list-style: none;
         .nav-item {
           color: #333;
-          margin-right: 10px;
+          margin-right: 20px;
           font-size: 16px;
           font-weight: 600;
+          display: block;
           .nav-link {
             color: #333;
             display: inline-block;
@@ -123,11 +124,8 @@ nav {
     }
     .profile-avatar {
       img {
-        width: 200px;
+        width: 150px;
         height: 200px;
-        object-fit: cover;
-        border-radius: 999px;
-        border: 5px solid #fff;
       }
     }
   }
