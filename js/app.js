@@ -46,6 +46,14 @@ $(".product").on('click', function (e) {
     });
 });
 
+// view demo web design
+
+$(".design").on('click',function(e){
+    var url = $(this).attr("data-url");
+    window.location.href = url;
+});
+
+
 // close modal
 $(document).on('click', ".modal-close", function (e) {
     var id = $(this).attr("data-id");
