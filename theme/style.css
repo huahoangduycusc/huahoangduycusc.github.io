@@ -22,6 +22,8 @@ body {
   background-color: #f1f2f7;
   font-family: "Open Sans", sans-serif;
   height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 nav {
@@ -260,6 +262,7 @@ nav .menu {
   width: 100%;
   margin: 0 auto;
   padding: 0 10px;
+  overflow-x: hidden;
 }
 
 section .section-header {
@@ -405,6 +408,11 @@ ul.list-content {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.btn-filter:last-child {
+  margin-right: 0px;
 }
 
 .btn-filter:hover {
